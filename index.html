@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Underdog Picks - June 25, 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="header__title">Today's MLB Underdog Picks & Plus-Odds Value Plays</h1>
+            <div class="header__meta">
+                <span class="header__date">Wednesday, June 25, 2025</span>
+                <span class="header__time">Analysis Time: 11:15 AM EST</span>
+            </div>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="btn btn--secondary btn--sm filter-btn active" data-filter="all">All Picks</button>
+                <button class="btn btn--secondary btn--sm filter-btn" data-filter="ML">Moneyline</button>
+                <button class="btn btn--secondary btn--sm filter-btn" data-filter="RL">Run Line</button>
+                <button class="btn btn--secondary btn--sm filter-btn" data-filter="total">Totals</button>
+            </div>
+            <div class="sort-controls">
+                <label for="sort-select" class="form-label">Sort by:</label>
+                <select id="sort-select" class="form-control sort-select">
+                    <option value="edge">Highest Edge</option>
+                    <option value="odds">Best Odds</option>
+                    <option value="time">Game Time</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Picks Table -->
+        <div class="picks-section">
+            <div class="card">
+                <div class="card__body">
+                    <div class="table-container">
+                        <table class="picks-table">
+                            <thead>
+                                <tr>
+                                    <th>Logo</th>
+                                    <th>Matchup</th>
+                                    <th>Start Time</th>
+                                    <th>Bet Type</th>
+                                    <th>Odds</th>
+                                    <th>Implied Prob.</th>
+                                    <th>Model Prob.</th>
+                                    <th>Edge</th>
+                                    <th>Rationale</th>
+                                </tr>
+                            </thead>
+                            <tbody id="picks-tbody">
+                                <!-- Picks will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Summary -->
+        <div class="performance-section">
+            <h2>Performance Summary</h2>
+            <div class="performance-grid">
+                <div class="card performance-card">
+                    <div class="card__body">
+                        <h3>Today's Bet Types</h3>
+                        <div class="bet-type-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Moneyline:</span>
+                                <span class="stat-value" id="ml-count">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Run Line:</span>
+                                <span class="stat-value" id="rl-count">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Totals:</span>
+                                <span class="stat-value" id="total-count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card performance-card">
+                    <div class="card__body">
+                        <h3>All-Time Performance</h3>
+                        <div class="performance-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Win Rate:</span>
+                                <span class="stat-value stat-highlight">Inaugural Run</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Average Edge:</span>
+                                <span class="stat-value" id="avg-edge">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Total Picks:</span>
+                                <span class="stat-value" id="total-picks">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Analysis -->
+        <div class="analysis-section">
+            <h2>Detailed Analysis</h2>
+            
+            <div class="analysis-grid">
+                <div class="card analysis-card">
+                    <div class="card__body">
+                        <h3>🔥 Highest Edge Play</h3>
+                        <div id="highest-edge-play">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card analysis-card">
+                    <div class="card__body">
+                        <h3>🏥 Injury Concerns</h3>
+                        <div class="analysis-content">
+                            <p>No major lineup changes affecting today's picks. All key players expected to start.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card analysis-card">
+                    <div class="card__body">
+                        <h3>🌤️ Weather Factors</h3>
+                        <div class="analysis-content">
+                            <p>Clear conditions expected for most games. Oracle Park (SF) may see evening fog affecting visibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expanded Details Modal -->
+        <div id="details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
